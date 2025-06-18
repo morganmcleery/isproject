@@ -1,0 +1,50 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: forestgreen;
+  background: url('https://th.bing.com/th/id/OIP.lfv5ePwLgBDTWuRGNkMyygHaEK?r=0&rs=1&pid=ImgDetMain') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Navigation */
+.nav-link {
+  display: inline-block;
+  margin: 10px;
+  color: #ffffff;
+  background-color: #6b4f2c;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+/* Section Wrapper */
+.section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Image Styling */
+.lion-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #6b4f2c;
+  color: white;
+  padding: 10px;
+}

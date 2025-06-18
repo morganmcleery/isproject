@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lion Facts Randomizer</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #f7f1e3; /* warm light background */
+      color: #4a3c1b; /* dark golden brown */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background-size: cover;
+      background-position: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      color: #a67c00; /* gold-ish */
+      text-shadow: 1px 1px 2px #5a3e00;
+    }
+    #fact-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px 40px;
+      border-radius: 15px;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      user-select: none;
+    }
+    button {
+      background-color: #a67c00;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #856000;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #5a4a1a;
+    }
+    a.back-link {
+      color: #4a3c1b;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="lions.html" class="back-link">&larr; Back to Lion Site</a>
+  
+
+  <h1>Lion Facts Randomizer</h1>
+
+  <div id="fact-box">
+    Loading fact...
+  </div>
+
+  <button id="new-fact-btn">Show me another fact</button>
+
+  <footer>
+    &copy; 2025 Lion Enthusiasts Club
+  </footer>
+
+  <script>
+    const facts = [
+      "Lions can run up to 50 mph (80 km/h) but only in short bursts.",
+      "A lion's roar can be heard up to 5 miles away.",
+      "Female lions do about 90% of the hunting for the pride.",
+      "Lions live in social groups called prides, usually consisting of related females and their cubs.",
+      "Male lions protect the pride’s territory and cubs.",
+      "Lions spend around 20 hours a day resting or sleeping.",
+      "The mane of a male lion makes him look larger and more intimidating to rivals.",
+      "Lions are the second largest big cat species in the world, after tigers.",
+      "A lion's whiskers help it sense its surroundings in the dark.",
+      "Cub mortality is high; many lion cubs do not survive past their first year."
+    ];
+
+    const factBox = document.getElementById('fact-box');
+    const newFactBtn = document.getElementById('new-fact-btn');
+
+    function showRandomFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factBox.textContent = facts[randomIndex];
+    }
+
+    newFactBtn.addEventListener('click', showRandomFact);
+
+    // Show a fact when the page loads
+    showRandomFact();
+  </script>
+
+</body>
+</html>
+
